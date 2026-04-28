@@ -1,0 +1,207 @@
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{B6E0E656-31DD-4C21-B313-553DB3077697}</ProjectGuid>
+        <MainSource>VSoft.AnsiConsoleR.dpk</MainSource>
+        <Base>True</Base>
+        <Config Condition="'$(Config)'==''">Debug</Config>
+        <TargetedPlatforms>3</TargetedPlatforms>
+        <AppType>Package</AppType>
+        <FrameworkType>None</FrameworkType>
+        <ProjectVersion>19.5</ProjectVersion>
+        <Platform Condition="'$(Platform)'==''">Win32</Platform>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Config)'=='Base' or '$(Base)'!=''">
+        <Base>true</Base>
+    </PropertyGroup>
+
+    <PropertyGroup Condition="('$(Platform)'=='Win32' and '$(Base)'=='true') or '$(Base_Win32)'!=''">
+        <Base_Win32>true</Base_Win32>
+        <CfgParent>Base</CfgParent>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="('$(Platform)'=='Win64' and '$(Base)'=='true') or '$(Base_Win64)'!=''">
+        <Base_Win64>true</Base_Win64>
+        <CfgParent>Base</CfgParent>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Config)'=='Release' or '$(Cfg_1)'!=''">
+        <Cfg_1>true</Cfg_1>
+        <CfgParent>Base</CfgParent>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Config)'=='Debug' or '$(Cfg_2)'!=''">
+        <Cfg_2>true</Cfg_2>
+        <CfgParent>Base</CfgParent>
+        <Base>true</Base>
+    </PropertyGroup>
+
+    <PropertyGroup Condition="'$(Base)'!=''">
+        <GenPackage>true</GenPackage>
+        <DllSuffix>$(Auto)</DllSuffix>
+        <VerInfo_Locale>3081</VerInfo_Locale>
+        <DCC_S>false</DCC_S>
+        <DCC_E>false</DCC_E>
+        <DCC_F>false</DCC_F>
+        <DCC_K>false</DCC_K>
+        <DCC_ImageBase>00400000</DCC_ImageBase>
+        <DCC_Namespace>System;Xml;Data;Datasnap;Web;Soap;$(DCC_Namespace)</DCC_Namespace>
+        <VerInfo_Keys>CompanyName=;FileDescription=;FileVersion=1.0.0.0;InternalName=;LegalCopyright=;LegalTrademarks=;OriginalFilename=;ProductName=;ProductVersion=1.0.0.0;Comments=;CFBundleName=;CFBundleDisplayName=;CFBundleIdentifier=;CFBundleVersion=;CFBundlePackageType=;CFBundleSignature=;CFBundleAllowMixedLocalizations=;CFBundleExecutable=</VerInfo_Keys>
+        <GenDll>true</GenDll>
+        <DCC_N>false</DCC_N>
+    </PropertyGroup>
+
+    <PropertyGroup Condition="'$(Base_Win32)'!=''">
+        <VerInfo_Keys>CompanyName=;FileDescription=;FileVersion=1.0.0.0;InternalName=;LegalCopyright=;LegalTrademarks=;OriginalFilename=;ProductName=;ProductVersion=1.0.0.0;Comments=</VerInfo_Keys>
+        <VerInfo_Locale>1033</VerInfo_Locale>
+        <VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
+        <DCC_Namespace>Winapi;System.Win;Data.Win;Datasnap.Win;Web.Win;Soap.Win;Xml.Win;Bde;$(DCC_Namespace)</DCC_Namespace>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Base_Win64)'!=''">
+        <VerInfo_Keys>CompanyName=;FileDescription=;FileVersion=1.0.0.0;InternalName=;LegalCopyright=;LegalTrademarks=;OriginalFilename=;ProductName=;ProductVersion=1.0.0.0;Comments=</VerInfo_Keys>
+        <VerInfo_Locale>1033</VerInfo_Locale>
+        <VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
+        <DCC_Namespace>Winapi;System.Win;Data.Win;Datasnap.Win;Web.Win;Soap.Win;Xml.Win;$(DCC_Namespace)</DCC_Namespace>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Cfg_1)'!=''">
+        <DCC_DebugInformation>false</DCC_DebugInformation>
+        <DCC_Define>RELEASE;$(DCC_Define)</DCC_Define>
+        <DCC_SymbolReferenceInfo>0</DCC_SymbolReferenceInfo>
+        <DCC_LocalDebugSymbols>false</DCC_LocalDebugSymbols>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Cfg_2)'!=''">
+        <DCC_Define>DEBUG;$(DCC_Define)</DCC_Define>
+        <DCC_Optimize>false</DCC_Optimize>
+        <DCC_GenerateStackFrames>true</DCC_GenerateStackFrames>
+    </PropertyGroup>
+    <ItemGroup>
+        <DelphiCompile Include="$(MainSource)">
+            <MainSource>MainSource</MainSource>
+        </DelphiCompile>
+        <DCCReference Include="rtl.dcp"/>
+        <DCCReference Include="VSoft.System.ConsoleR.dcp"/>
+        <DCCReference Include="..\..\source\Core\VSoft.AnsiConsole.Types.pas"/>
+        <DCCReference Include="..\..\source\Core\VSoft.AnsiConsole.Color.pas"/>
+        <DCCReference Include="..\..\source\Core\VSoft.AnsiConsole.Emoji.pas"/>
+        <DCCReference Include="..\..\source\Core\VSoft.AnsiConsole.Style.pas"/>
+        <DCCReference Include="..\..\source\Core\VSoft.AnsiConsole.Segment.pas"/>
+        <DCCReference Include="..\..\source\Core\VSoft.AnsiConsole.Measurement.pas"/>
+        <DCCReference Include="..\..\source\Internal\VSoft.AnsiConsole.Internal.Cell.Tables.pas"/>
+        <DCCReference Include="..\..\source\Internal\VSoft.AnsiConsole.Internal.Cell.pas"/>
+        <DCCReference Include="..\..\source\Internal\VSoft.AnsiConsole.Internal.SegmentOps.pas"/>
+        <DCCReference Include="..\..\source\Rendering\VSoft.AnsiConsole.Rendering.pas"/>
+        <DCCReference Include="..\..\source\Rendering\VSoft.AnsiConsole.Rendering.AnsiWriter.pas"/>
+        <DCCReference Include="..\..\source\Profile\VSoft.AnsiConsole.Capabilities.pas"/>
+        <DCCReference Include="..\..\source\Profile\VSoft.AnsiConsole.Detection.pas"/>
+        <DCCReference Include="..\..\source\Profile\VSoft.AnsiConsole.Enrichment.pas"/>
+        <DCCReference Include="..\..\source\Profile\VSoft.AnsiConsole.Profile.pas"/>
+        <DCCReference Include="..\..\source\Console\VSoft.AnsiConsole.Console.pas"/>
+        <DCCReference Include="..\..\source\Console\VSoft.AnsiConsole.Settings.pas"/>
+        <DCCReference Include="..\..\source\Console\VSoft.AnsiConsole.Cursor.pas"/>
+        <DCCReference Include="..\..\source\Markup\VSoft.AnsiConsole.Markup.Tokenizer.pas"/>
+        <DCCReference Include="..\..\source\Markup\VSoft.AnsiConsole.Markup.Parser.pas"/>
+        <DCCReference Include="..\..\source\Borders\VSoft.AnsiConsole.Borders.Box.pas"/>
+        <DCCReference Include="..\..\source\Borders\VSoft.AnsiConsole.Borders.Table.pas"/>
+        <DCCReference Include="..\..\source\Borders\VSoft.AnsiConsole.Borders.Tree.pas"/>
+        <DCCReference Include="..\..\source\Widgets\VSoft.AnsiConsole.Widgets.Text.pas"/>
+        <DCCReference Include="..\..\source\Widgets\VSoft.AnsiConsole.Widgets.Markup.pas"/>
+        <DCCReference Include="..\..\source\Widgets\VSoft.AnsiConsole.Widgets.Rule.pas"/>
+        <DCCReference Include="..\..\source\Widgets\VSoft.AnsiConsole.Widgets.Paragraph.pas"/>
+        <DCCReference Include="..\..\source\Widgets\VSoft.AnsiConsole.Widgets.Padder.pas"/>
+        <DCCReference Include="..\..\source\Widgets\VSoft.AnsiConsole.Widgets.Align.pas"/>
+        <DCCReference Include="..\..\source\Widgets\VSoft.AnsiConsole.Widgets.Rows.pas"/>
+        <DCCReference Include="..\..\source\Widgets\VSoft.AnsiConsole.Widgets.Columns.pas"/>
+        <DCCReference Include="..\..\source\Widgets\VSoft.AnsiConsole.Widgets.Grid.pas"/>
+        <DCCReference Include="..\..\source\Widgets\VSoft.AnsiConsole.Widgets.Panel.pas"/>
+        <DCCReference Include="..\..\source\Widgets\VSoft.AnsiConsole.Widgets.Table.pas"/>
+        <DCCReference Include="..\..\source\Widgets\VSoft.AnsiConsole.Widgets.Tree.pas"/>
+        <DCCReference Include="..\..\source\Console\VSoft.AnsiConsole.Input.pas"/>
+        <DCCReference Include="..\..\source\Prompts\VSoft.AnsiConsole.Prompts.Common.pas"/>
+        <DCCReference Include="..\..\source\Prompts\VSoft.AnsiConsole.Prompts.Hierarchy.pas"/>
+        <DCCReference Include="..\..\source\Prompts\VSoft.AnsiConsole.Prompts.Text.pas"/>
+        <DCCReference Include="..\..\source\Prompts\VSoft.AnsiConsole.Prompts.Text.Generic.pas"/>
+        <DCCReference Include="..\..\source\Prompts\VSoft.AnsiConsole.Prompts.Confirm.pas"/>
+        <DCCReference Include="..\..\source\Prompts\VSoft.AnsiConsole.Prompts.Select.pas"/>
+        <DCCReference Include="..\..\source\Prompts\VSoft.AnsiConsole.Prompts.MultiSelect.pas"/>
+        <DCCReference Include="..\..\source\Live\VSoft.AnsiConsole.Live.Exclusivity.pas"/>
+        <DCCReference Include="..\..\source\Live\VSoft.AnsiConsole.Live.Display.pas"/>
+        <DCCReference Include="..\..\source\Live\VSoft.AnsiConsole.Live.Spinners.pas"/>
+        <DCCReference Include="..\..\source\Live\VSoft.AnsiConsole.Live.Status.pas"/>
+        <DCCReference Include="..\..\source\Live\VSoft.AnsiConsole.Live.Progress.pas"/>
+        <DCCReference Include="..\..\source\Widgets\VSoft.AnsiConsole.Widgets.Canvas.pas"/>
+        <DCCReference Include="..\..\source\Widgets\VSoft.AnsiConsole.Widgets.BarChart.pas"/>
+        <DCCReference Include="..\..\source\Widgets\VSoft.AnsiConsole.Widgets.BreakdownChart.pas"/>
+        <DCCReference Include="..\..\source\Widgets\VSoft.AnsiConsole.Widgets.Calendar.pas"/>
+        <DCCReference Include="..\..\source\Widgets\VSoft.AnsiConsole.Widgets.TextPath.pas"/>
+        <DCCReference Include="..\..\source\Widgets\VSoft.AnsiConsole.Widgets.Layout.pas"/>
+        <DCCReference Include="..\..\source\Widgets\VSoft.AnsiConsole.Widgets.Figlet.pas"/>
+        <DCCReference Include="..\..\source\Internal\VSoft.AnsiConsole.Internal.FigletFont.pas"/>
+        <DCCReference Include="..\..\source\Internal\VSoft.AnsiConsole.Internal.Fonts.Standard.pas"/>
+        <DCCReference Include="..\..\source\Widgets\VSoft.AnsiConsole.Widgets.Json.pas"/>
+        <DCCReference Include="..\..\source\Widgets\VSoft.AnsiConsole.Widgets.Exception.pas"/>
+        <DCCReference Include="..\..\source\Console\VSoft.AnsiConsole.Recorder.pas"/>
+        <DCCReference Include="..\..\source\VSoft.AnsiConsole.pas"/>
+        <BuildConfiguration Include="Debug">
+            <Key>Cfg_2</Key>
+            <CfgParent>Base</CfgParent>
+        </BuildConfiguration>
+        <BuildConfiguration Include="Base">
+            <Key>Base</Key>
+        </BuildConfiguration>
+        <BuildConfiguration Include="Release">
+            <Key>Cfg_1</Key>
+            <CfgParent>Base</CfgParent>
+        </BuildConfiguration>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Delphi.Personality.12</Borland.Personality>
+        <Borland.ProjectType>Package</Borland.ProjectType>
+        <BorlandProject>
+            <Delphi.Personality>
+                <Source>
+                    <Source Name="MainSource">VSoft.AnsiConsoleR.dpk</Source>
+                </Source>
+                <VersionInfo>
+                    <VersionInfo Name="IncludeVerInfo">False</VersionInfo>
+                    <VersionInfo Name="AutoIncBuild">False</VersionInfo>
+                    <VersionInfo Name="MajorVer">1</VersionInfo>
+                    <VersionInfo Name="MinorVer">0</VersionInfo>
+                    <VersionInfo Name="Release">0</VersionInfo>
+                    <VersionInfo Name="Build">0</VersionInfo>
+                    <VersionInfo Name="Debug">False</VersionInfo>
+                    <VersionInfo Name="PreRelease">False</VersionInfo>
+                    <VersionInfo Name="Special">False</VersionInfo>
+                    <VersionInfo Name="Private">False</VersionInfo>
+                    <VersionInfo Name="DLL">False</VersionInfo>
+                    <VersionInfo Name="Locale">3081</VersionInfo>
+                    <VersionInfo Name="CodePage">1252</VersionInfo>
+                </VersionInfo>
+                <VersionInfoKeys>
+                    <VersionInfoKeys Name="CompanyName"/>
+                    <VersionInfoKeys Name="FileDescription"/>
+                    <VersionInfoKeys Name="FileVersion">1.0.0.0</VersionInfoKeys>
+                    <VersionInfoKeys Name="InternalName"/>
+                    <VersionInfoKeys Name="LegalCopyright"/>
+                    <VersionInfoKeys Name="LegalTrademarks"/>
+                    <VersionInfoKeys Name="OriginalFilename"/>
+                    <VersionInfoKeys Name="ProductName"/>
+                    <VersionInfoKeys Name="ProductVersion">1.0.0.0</VersionInfoKeys>
+                    <VersionInfoKeys Name="Comments"/>
+                    <VersionInfoKeys Name="CFBundleName"/>
+                    <VersionInfoKeys Name="CFBundleDisplayName"/>
+                    <VersionInfoKeys Name="CFBundleIdentifier"/>
+                    <VersionInfoKeys Name="CFBundleVersion"/>
+                    <VersionInfoKeys Name="CFBundlePackageType"/>
+                    <VersionInfoKeys Name="CFBundleSignature"/>
+                    <VersionInfoKeys Name="CFBundleAllowMixedLocalizations"/>
+                    <VersionInfoKeys Name="CFBundleExecutable"/>
+                </VersionInfoKeys>
+            </Delphi.Personality>
+            <Platforms>
+                <Platform value="Win32">True</Platform>                <Platform value="Win64">True</Platform>
+            </Platforms>
+        </BorlandProject>
+        <ProjectFileVersion>12</ProjectFileVersion>
+    </ProjectExtensions>
+    <Import Project="$(BDS)\Bin\CodeGear.Delphi.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Delphi.Targets')"/>
+    <Import Project="$(APPDATA)\Embarcadero\$(BDSAPPDATABASEDIR)\$(PRODUCTVERSION)\UserTools.proj" Condition="Exists('$(APPDATA)\Embarcadero\$(BDSAPPDATABASEDIR)\$(PRODUCTVERSION)\UserTools.proj')"/>
+</Project>

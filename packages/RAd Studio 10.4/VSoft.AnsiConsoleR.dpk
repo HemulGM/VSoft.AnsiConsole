@@ -1,0 +1,98 @@
+package VSoft.AnsiConsoleR;
+
+{$R *.res}
+{$IFDEF IMPLICITBUILDING This IFDEF should not be used by users}
+{$ALIGN 8}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO ON}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS ON}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION OFF}
+{$OVERFLOWCHECKS OFF}
+{$RANGECHECKS OFF}
+{$REFERENCEINFO ON}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES ON}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST OFF}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$DEFINE DEBUG}
+{$ENDIF IMPLICITBUILDING}
+{$LIBSUFFIX AUTO}
+{$IMPLICITBUILD ON}
+
+requires
+  rtl,
+  VSoft.System.ConsoleR;
+
+contains
+  VSoft.AnsiConsole.Types in '..\..\source\Core\VSoft.AnsiConsole.Types.pas',
+  VSoft.AnsiConsole.Color in '..\..\source\Core\VSoft.AnsiConsole.Color.pas',
+  VSoft.AnsiConsole.Emoji in '..\..\source\Core\VSoft.AnsiConsole.Emoji.pas',
+  VSoft.AnsiConsole.Style in '..\..\source\Core\VSoft.AnsiConsole.Style.pas',
+  VSoft.AnsiConsole.Segment in '..\..\source\Core\VSoft.AnsiConsole.Segment.pas',
+  VSoft.AnsiConsole.Measurement in '..\..\source\Core\VSoft.AnsiConsole.Measurement.pas',
+  VSoft.AnsiConsole.Internal.Cell.Tables in '..\..\source\Internal\VSoft.AnsiConsole.Internal.Cell.Tables.pas',
+  VSoft.AnsiConsole.Internal.Cell in '..\..\source\Internal\VSoft.AnsiConsole.Internal.Cell.pas',
+  VSoft.AnsiConsole.Internal.SegmentOps in '..\..\source\Internal\VSoft.AnsiConsole.Internal.SegmentOps.pas',
+  VSoft.AnsiConsole.Rendering in '..\..\source\Rendering\VSoft.AnsiConsole.Rendering.pas',
+  VSoft.AnsiConsole.Rendering.AnsiWriter in '..\..\source\Rendering\VSoft.AnsiConsole.Rendering.AnsiWriter.pas',
+  VSoft.AnsiConsole.Capabilities in '..\..\source\Profile\VSoft.AnsiConsole.Capabilities.pas',
+  VSoft.AnsiConsole.Detection in '..\..\source\Profile\VSoft.AnsiConsole.Detection.pas',
+  VSoft.AnsiConsole.Enrichment in '..\..\source\Profile\VSoft.AnsiConsole.Enrichment.pas',
+  VSoft.AnsiConsole.Profile in '..\..\source\Profile\VSoft.AnsiConsole.Profile.pas',
+  VSoft.AnsiConsole.Console in '..\..\source\Console\VSoft.AnsiConsole.Console.pas',
+  VSoft.AnsiConsole.Settings in '..\..\source\Console\VSoft.AnsiConsole.Settings.pas',
+  VSoft.AnsiConsole.Cursor in '..\..\source\Console\VSoft.AnsiConsole.Cursor.pas',
+  VSoft.AnsiConsole.Markup.Tokenizer in '..\..\source\Markup\VSoft.AnsiConsole.Markup.Tokenizer.pas',
+  VSoft.AnsiConsole.Markup.Parser in '..\..\source\Markup\VSoft.AnsiConsole.Markup.Parser.pas',
+  VSoft.AnsiConsole.Borders.Box in '..\..\source\Borders\VSoft.AnsiConsole.Borders.Box.pas',
+  VSoft.AnsiConsole.Borders.Table in '..\..\source\Borders\VSoft.AnsiConsole.Borders.Table.pas',
+  VSoft.AnsiConsole.Borders.Tree in '..\..\source\Borders\VSoft.AnsiConsole.Borders.Tree.pas',
+  VSoft.AnsiConsole.Widgets.Text in '..\..\source\Widgets\VSoft.AnsiConsole.Widgets.Text.pas',
+  VSoft.AnsiConsole.Widgets.Markup in '..\..\source\Widgets\VSoft.AnsiConsole.Widgets.Markup.pas',
+  VSoft.AnsiConsole.Widgets.Rule in '..\..\source\Widgets\VSoft.AnsiConsole.Widgets.Rule.pas',
+  VSoft.AnsiConsole.Widgets.Paragraph in '..\..\source\Widgets\VSoft.AnsiConsole.Widgets.Paragraph.pas',
+  VSoft.AnsiConsole.Widgets.Padder in '..\..\source\Widgets\VSoft.AnsiConsole.Widgets.Padder.pas',
+  VSoft.AnsiConsole.Widgets.Align in '..\..\source\Widgets\VSoft.AnsiConsole.Widgets.Align.pas',
+  VSoft.AnsiConsole.Widgets.Rows in '..\..\source\Widgets\VSoft.AnsiConsole.Widgets.Rows.pas',
+  VSoft.AnsiConsole.Widgets.Columns in '..\..\source\Widgets\VSoft.AnsiConsole.Widgets.Columns.pas',
+  VSoft.AnsiConsole.Widgets.Grid in '..\..\source\Widgets\VSoft.AnsiConsole.Widgets.Grid.pas',
+  VSoft.AnsiConsole.Widgets.Panel in '..\..\source\Widgets\VSoft.AnsiConsole.Widgets.Panel.pas',
+  VSoft.AnsiConsole.Widgets.Table in '..\..\source\Widgets\VSoft.AnsiConsole.Widgets.Table.pas',
+  VSoft.AnsiConsole.Widgets.Tree in '..\..\source\Widgets\VSoft.AnsiConsole.Widgets.Tree.pas',
+  VSoft.AnsiConsole.Input in '..\..\source\Console\VSoft.AnsiConsole.Input.pas',
+  VSoft.AnsiConsole.Prompts.Common in '..\..\source\Prompts\VSoft.AnsiConsole.Prompts.Common.pas',
+  VSoft.AnsiConsole.Prompts.Hierarchy in '..\..\source\Prompts\VSoft.AnsiConsole.Prompts.Hierarchy.pas',
+  VSoft.AnsiConsole.Prompts.Text in '..\..\source\Prompts\VSoft.AnsiConsole.Prompts.Text.pas',
+  VSoft.AnsiConsole.Prompts.Text.Generic in '..\..\source\Prompts\VSoft.AnsiConsole.Prompts.Text.Generic.pas',
+  VSoft.AnsiConsole.Prompts.Confirm in '..\..\source\Prompts\VSoft.AnsiConsole.Prompts.Confirm.pas',
+  VSoft.AnsiConsole.Prompts.Select in '..\..\source\Prompts\VSoft.AnsiConsole.Prompts.Select.pas',
+  VSoft.AnsiConsole.Prompts.MultiSelect in '..\..\source\Prompts\VSoft.AnsiConsole.Prompts.MultiSelect.pas',
+  VSoft.AnsiConsole.Live.Exclusivity in '..\..\source\Live\VSoft.AnsiConsole.Live.Exclusivity.pas',
+  VSoft.AnsiConsole.Live.Display in '..\..\source\Live\VSoft.AnsiConsole.Live.Display.pas',
+  VSoft.AnsiConsole.Live.Spinners in '..\..\source\Live\VSoft.AnsiConsole.Live.Spinners.pas',
+  VSoft.AnsiConsole.Live.Status in '..\..\source\Live\VSoft.AnsiConsole.Live.Status.pas',
+  VSoft.AnsiConsole.Live.Progress in '..\..\source\Live\VSoft.AnsiConsole.Live.Progress.pas',
+  VSoft.AnsiConsole.Widgets.Canvas in '..\..\source\Widgets\VSoft.AnsiConsole.Widgets.Canvas.pas',
+  VSoft.AnsiConsole.Widgets.BarChart in '..\..\source\Widgets\VSoft.AnsiConsole.Widgets.BarChart.pas',
+  VSoft.AnsiConsole.Widgets.BreakdownChart in '..\..\source\Widgets\VSoft.AnsiConsole.Widgets.BreakdownChart.pas',
+  VSoft.AnsiConsole.Widgets.Calendar in '..\..\source\Widgets\VSoft.AnsiConsole.Widgets.Calendar.pas',
+  VSoft.AnsiConsole.Widgets.TextPath in '..\..\source\Widgets\VSoft.AnsiConsole.Widgets.TextPath.pas',
+  VSoft.AnsiConsole.Widgets.Layout in '..\..\source\Widgets\VSoft.AnsiConsole.Widgets.Layout.pas',
+  VSoft.AnsiConsole.Widgets.Figlet in '..\..\source\Widgets\VSoft.AnsiConsole.Widgets.Figlet.pas',
+  VSoft.AnsiConsole.Internal.FigletFont in '..\..\source\Internal\VSoft.AnsiConsole.Internal.FigletFont.pas',
+  VSoft.AnsiConsole.Internal.Fonts.Standard in '..\..\source\Internal\VSoft.AnsiConsole.Internal.Fonts.Standard.pas',
+  VSoft.AnsiConsole.Widgets.Json in '..\..\source\Widgets\VSoft.AnsiConsole.Widgets.Json.pas',
+  VSoft.AnsiConsole.Widgets.Exception in '..\..\source\Widgets\VSoft.AnsiConsole.Widgets.Exception.pas',
+  VSoft.AnsiConsole.Recorder in '..\..\source\Console\VSoft.AnsiConsole.Recorder.pas',
+  VSoft.AnsiConsole in '..\..\source\VSoft.AnsiConsole.pas';
+
+end.

@@ -1,0 +1,228 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{1ADC5DFF-F952-4E71-B069-633B0C011BDE}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="BarChart\BarChart.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Breakdown\Breakdown.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Calendar\Calendar.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Canvas\Canvas.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="ExceptionDemo\ExceptionDemo.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Figlet\Figlet.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Hierarchy\Hierarchy.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Json\Json.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Markup\Markup.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="PanelRule\PanelRule.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Progress\Progress.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Prompts\Prompts.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="QuickStart\QuickStart.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Recorder\Recorder.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Status\Status.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Table\Table.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Tree\Tree.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="BarChart">
+        <MSBuild Projects="BarChart\BarChart.dproj"/>
+    </Target>
+    <Target Name="BarChart:Clean">
+        <MSBuild Projects="BarChart\BarChart.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="BarChart:Make">
+        <MSBuild Projects="BarChart\BarChart.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Breakdown">
+        <MSBuild Projects="Breakdown\Breakdown.dproj"/>
+    </Target>
+    <Target Name="Breakdown:Clean">
+        <MSBuild Projects="Breakdown\Breakdown.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Breakdown:Make">
+        <MSBuild Projects="Breakdown\Breakdown.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Calendar">
+        <MSBuild Projects="Calendar\Calendar.dproj"/>
+    </Target>
+    <Target Name="Calendar:Clean">
+        <MSBuild Projects="Calendar\Calendar.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Calendar:Make">
+        <MSBuild Projects="Calendar\Calendar.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Canvas">
+        <MSBuild Projects="Canvas\Canvas.dproj"/>
+    </Target>
+    <Target Name="Canvas:Clean">
+        <MSBuild Projects="Canvas\Canvas.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Canvas:Make">
+        <MSBuild Projects="Canvas\Canvas.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="ExceptionDemo">
+        <MSBuild Projects="ExceptionDemo\ExceptionDemo.dproj"/>
+    </Target>
+    <Target Name="ExceptionDemo:Clean">
+        <MSBuild Projects="ExceptionDemo\ExceptionDemo.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="ExceptionDemo:Make">
+        <MSBuild Projects="ExceptionDemo\ExceptionDemo.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Figlet">
+        <MSBuild Projects="Figlet\Figlet.dproj"/>
+    </Target>
+    <Target Name="Figlet:Clean">
+        <MSBuild Projects="Figlet\Figlet.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Figlet:Make">
+        <MSBuild Projects="Figlet\Figlet.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Hierarchy">
+        <MSBuild Projects="Hierarchy\Hierarchy.dproj"/>
+    </Target>
+    <Target Name="Hierarchy:Clean">
+        <MSBuild Projects="Hierarchy\Hierarchy.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Hierarchy:Make">
+        <MSBuild Projects="Hierarchy\Hierarchy.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Json">
+        <MSBuild Projects="Json\Json.dproj"/>
+    </Target>
+    <Target Name="Json:Clean">
+        <MSBuild Projects="Json\Json.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Json:Make">
+        <MSBuild Projects="Json\Json.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Markup">
+        <MSBuild Projects="Markup\Markup.dproj"/>
+    </Target>
+    <Target Name="Markup:Clean">
+        <MSBuild Projects="Markup\Markup.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Markup:Make">
+        <MSBuild Projects="Markup\Markup.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="PanelRule">
+        <MSBuild Projects="PanelRule\PanelRule.dproj"/>
+    </Target>
+    <Target Name="PanelRule:Clean">
+        <MSBuild Projects="PanelRule\PanelRule.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="PanelRule:Make">
+        <MSBuild Projects="PanelRule\PanelRule.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Progress">
+        <MSBuild Projects="Progress\Progress.dproj"/>
+    </Target>
+    <Target Name="Progress:Clean">
+        <MSBuild Projects="Progress\Progress.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Progress:Make">
+        <MSBuild Projects="Progress\Progress.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Prompts">
+        <MSBuild Projects="Prompts\Prompts.dproj"/>
+    </Target>
+    <Target Name="Prompts:Clean">
+        <MSBuild Projects="Prompts\Prompts.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Prompts:Make">
+        <MSBuild Projects="Prompts\Prompts.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="QuickStart">
+        <MSBuild Projects="QuickStart\QuickStart.dproj"/>
+    </Target>
+    <Target Name="QuickStart:Clean">
+        <MSBuild Projects="QuickStart\QuickStart.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="QuickStart:Make">
+        <MSBuild Projects="QuickStart\QuickStart.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Recorder">
+        <MSBuild Projects="Recorder\Recorder.dproj"/>
+    </Target>
+    <Target Name="Recorder:Clean">
+        <MSBuild Projects="Recorder\Recorder.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Recorder:Make">
+        <MSBuild Projects="Recorder\Recorder.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Status">
+        <MSBuild Projects="Status\Status.dproj"/>
+    </Target>
+    <Target Name="Status:Clean">
+        <MSBuild Projects="Status\Status.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Status:Make">
+        <MSBuild Projects="Status\Status.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Table">
+        <MSBuild Projects="Table\Table.dproj"/>
+    </Target>
+    <Target Name="Table:Clean">
+        <MSBuild Projects="Table\Table.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Table:Make">
+        <MSBuild Projects="Table\Table.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Tree">
+        <MSBuild Projects="Tree\Tree.dproj"/>
+    </Target>
+    <Target Name="Tree:Clean">
+        <MSBuild Projects="Tree\Tree.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Tree:Make">
+        <MSBuild Projects="Tree\Tree.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="BarChart;Breakdown;Calendar;Canvas;ExceptionDemo;Figlet;Hierarchy;Json;Markup;PanelRule;Progress;Prompts;QuickStart;Recorder;Status;Table;Tree"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="BarChart:Clean;Breakdown:Clean;Calendar:Clean;Canvas:Clean;ExceptionDemo:Clean;Figlet:Clean;Hierarchy:Clean;Json:Clean;Markup:Clean;PanelRule:Clean;Progress:Clean;Prompts:Clean;QuickStart:Clean;Recorder:Clean;Status:Clean;Table:Clean;Tree:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="BarChart:Make;Breakdown:Make;Calendar:Make;Canvas:Make;ExceptionDemo:Make;Figlet:Make;Hierarchy:Make;Json:Make;Markup:Make;PanelRule:Make;Progress:Make;Prompts:Make;QuickStart:Make;Recorder:Make;Status:Make;Table:Make;Tree:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>
