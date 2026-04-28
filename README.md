@@ -222,7 +222,7 @@ AnsiConsole.Status.Start('[yellow]Connecting...[/]',
   end);
 ```
 
-![Status screenshot](/images/status.png)
+![Status screenshot|774x34](/images/status.gif)
 
 <!-- screenshot: spinner + message, mid-rotation -->
 
@@ -246,7 +246,7 @@ begin
 end;
 ```
 
-![Prompts screenshot](/images/prompts.png)
+![Prompts screenshot](/images/prompt.png)
 
 <!-- screenshot: text prompt, confirm, then selection list with one row highlighted -->
 
@@ -301,7 +301,7 @@ AnsiConsole.Write(
     .WithCulture('en-GB'));
 ```
 
-![Calendar screenshot](docs/images/calendar.png)
+![Calendar screenshot](/images/calendar.png)
 
 <!-- screenshot: april 2026 calendar with 25 highlighted -->
 
@@ -323,13 +323,13 @@ AnsiConsole.Write(chart);
 ```pascal
 brk := Widgets.BreakdownChart;
 brk.AddItem('Elixir', 35, TAnsiColor.Magenta);
-brk.AddItem('C#',     27, TAnsiColor.Aqua);
+brk.AddItem('Delphi',     27, TAnsiColor.Aqua);
 brk.AddItem('Ruby',   15, TAnsiColor.Red);
 brk.WithWidth(50);
 AnsiConsole.Write(brk);
 ```
 
-![BreakdownChart screenshot](docs/images/breakdown.png)
+![BreakdownChart screenshot](/images/breakdown.png)
 
 <!-- screenshot: segmented bar + tag row underneath -->
 
@@ -348,7 +348,7 @@ begin
 end;
 ```
 
-![Canvas screenshot](docs/images/canvas.png)
+![Canvas screenshot](/images/canvas.png)
 
 <!-- screenshot: 40x20 colour gradient using half-block glyphs -->
 
@@ -356,12 +356,12 @@ end;
 
 ```pascal
 AnsiConsole.Write(
-  Widgets.FigletText('Hello')
+  Widgets.FigletText('Hello Delphi')
     .WithColor(TAnsiColor.Aqua)
     .WithAlignment(TAlignment.Center));
 ```
 
-![Figlet screenshot](docs/images/figlet.png)
+![Figlet screenshot](/images/figlet.png)
 
 <!-- screenshot: large ASCII-art "Hello" centred and coloured -->
 
@@ -373,7 +373,7 @@ AnsiConsole.Write(
     '{"name":"Vincent","skills":["Delphi","Pascal"],"active":true}'));
 ```
 
-![Json screenshot](docs/images/json.png)
+![Json screenshot](/images/json.png)
 
 <!-- screenshot: indented JSON with keys/strings/numbers/booleans coloured differently -->
 
@@ -391,7 +391,7 @@ except
 end;
 ```
 
-![Exception screenshot](docs/images/exception.png)
+![Exception screenshot](/images/exception.png)
 
 <!-- screenshot: type+message header, then a stack frame with shortened path -->
 
@@ -413,10 +413,6 @@ begin
   TFile.WriteAllText('demo.html', rec.ExportHtml);
 end;
 ```
-
-![Recorder screenshot](docs/images/recorder.png)
-
-<!-- screenshot: side-by-side: live console output (left) and the generated HTML rendered in a browser (right) -->
 
 ## Compatibility
 
@@ -444,7 +440,7 @@ value-typed records) are native.
 
 ### Spectre.Console (.NET)
 
-[Spectre.Console](https://github.com/spectreconsole/spectre.console) is the
+[Spectre.Console](https://github.com/spectreconsole/spectre.console) by Patrik Svensson is the
 direct ancestor. The widget surface, border styles, segment-based render
 pipeline, prompt design, status / progress / live-display contracts, and
 the recorder all follow Spectre's model very closely. Where there's an

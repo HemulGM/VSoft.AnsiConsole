@@ -7,6 +7,7 @@ uses
   VSoft.AnsiConsole;
 
 begin
+  AnsiConsole.WriteLine;
   AnsiConsole.Status.Start('[yellow]Connecting...[/]',
     procedure(const ctx : IStatus)
     begin

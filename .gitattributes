@@ -12,5 +12,6 @@
 *.dres binary
 *.ico binary
 *.png binary
+*.gif binary
 
 *.dspec.yaml filter=insert-hash

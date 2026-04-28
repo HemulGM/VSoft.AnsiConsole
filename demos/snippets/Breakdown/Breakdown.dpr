@@ -10,7 +10,7 @@ var
 begin
   brk := Widgets.BreakdownChart;
   brk.AddItem('Elixir', 35, TAnsiColor.Fuchsia);
-  brk.AddItem('C#',     27, TAnsiColor.Aqua);
+  brk.AddItem('Delphi',     27, TAnsiColor.Aqua);
   brk.AddItem('Ruby',   15, TAnsiColor.Red);
   brk.WithWidth(50);
   AnsiConsole.Write(brk);

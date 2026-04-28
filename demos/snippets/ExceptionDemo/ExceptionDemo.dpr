@@ -8,6 +8,7 @@ uses
 
 begin
   try
+    AnsiConsole.WriteLine;
     raise EInOutError.Create('disk full');
   except
     on E : Exception do
@@ -17,9 +18,9 @@ begin
             'MyApp.Storage.Save in C:\src\MyApp\Storage.pas:142' + sLineBreak +
             'MyApp.Worker.Run  in C:\src\MyApp\Worker.pas:56'    + sLineBreak +
             'MyApp.Main')
-          .WithFormats([TExceptionFormat.ShortenPaths,
-                         TExceptionFormat.ShortenMethods]));
+          .WithFormats([ TExceptionFormat.ShortenMethods]));
   end;
+  AnsiConsole.WriteLine;
   AnsiConsole.WriteLine;
   Write('Press <Enter> to quit...');
   Readln;
