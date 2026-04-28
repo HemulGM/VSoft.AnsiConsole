@@ -26,6 +26,7 @@ package VSoft.AnsiConsoleR;
 {$DEFINE DEBUG}
 {$ENDIF IMPLICITBUILDING}
 {$IMPLICITBUILD ON}
+{$LIBSUFFIX '220'}
 
 requires
   rtl,

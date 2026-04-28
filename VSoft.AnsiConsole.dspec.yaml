@@ -30,7 +30,7 @@ templates:
   - name: default
     dependencies:
       - id: VSoft.System.Console
-        version: 1.2.0
+        version: "[1.2.0,]"
     source:
       - src: ./LICENSE
       - src: ./source/**.pas

@@ -1,5 +1,4 @@
 package VSoft.AnsiConsoleR;
-
 {$R *.res}
 {$IFDEF IMPLICITBUILDING This IFDEF should not be used by users}
 {$ALIGN 8}
@@ -27,11 +26,9 @@ package VSoft.AnsiConsoleR;
 {$ENDIF IMPLICITBUILDING}
 {$LIBSUFFIX AUTO}
 {$IMPLICITBUILD ON}
-
 requires
   rtl,
   VSoft.System.ConsoleR;
-
 contains
   VSoft.AnsiConsole.Types in '..\..\source\Core\VSoft.AnsiConsole.Types.pas',
   VSoft.AnsiConsole.Color in '..\..\source\Core\VSoft.AnsiConsole.Color.pas',
@@ -94,5 +91,4 @@ contains
   VSoft.AnsiConsole.Widgets.Exception in '..\..\source\Widgets\VSoft.AnsiConsole.Widgets.Exception.pas',
   VSoft.AnsiConsole.Recorder in '..\..\source\Console\VSoft.AnsiConsole.Recorder.pas',
   VSoft.AnsiConsole in '..\..\source\VSoft.AnsiConsole.pas';
-
 end.
