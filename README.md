@@ -15,14 +15,14 @@ that render through a unified pipeline.
 
 <!-- screenshot: full ReadmeDemo run in Windows Terminal -->
 
-> **Full documentation lives under [`docs/`](docs/)** —
-> [Quick start](docs/getting-started/quick-start.md) ·
-> [Architecture](docs/getting-started/architecture.md) ·
-> [Widgets](docs/widgets/markup.md) ·
-> [Live displays](docs/live/status.md) ·
-> [Prompts](docs/prompts/text-prompt.md) ·
-> [Recorder](docs/recording/recorder.md) ·
-> [Reference](docs/reference/markup-syntax.md)
+> **Full documentation lives under [`here`](https://vsofttechnologies.github.io/VSoft.AnsiConsole/)** —
+> [Quick start](https://vsofttechnologies.github.io/VSoft.AnsiConsole/getting-started/quick-start) ·
+> [Architecture](https://vsofttechnologies.github.io/VSoft.AnsiConsole/getting-started/architecture) ·
+> [Widgets](https://vsofttechnologies.github.io/VSoft.AnsiConsole/widgets/markup) ·
+> [Live displays](https://vsofttechnologies.github.io/VSoft.AnsiConsole/live/status) ·
+> [Prompts](https://vsofttechnologies.github.io/VSoft.AnsiConsole/prompts/text-prompt) ·
+> [Recorder](https://vsofttechnologies.github.io/VSoft.AnsiConsole/recording/recorder) ·
+> [Reference](https://vsofttechnologies.github.io/VSoft.AnsiConsole/reference/markup-syntax)
 
 
 
