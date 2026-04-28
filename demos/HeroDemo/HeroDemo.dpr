@@ -14,6 +14,8 @@ procedure RunDemo;
 var
   table : ITable;
 begin
+  console.Clear;
+
   // Start with mundane terminal output
   console.WriteLine('test results log:');
   console.WriteLine('module_a: pass');
