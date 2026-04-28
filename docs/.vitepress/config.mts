@@ -7,7 +7,7 @@ export default defineConfig({
   description: 'Rich, interactive console output for Delphi - tables, trees, live progress, prompts, syntax-coloured exceptions.',
   cleanUrls: true,
   lastUpdated: true,
-  base: '/docs',
+  base: '/docs/',
 
   head: [
     ['link', { rel: 'icon', href: '/images/favicon.png' }],
