@@ -77,7 +77,15 @@ uses
   VSoft.AnsiConsole.Widgets.Json in '..\..\source\Widgets\VSoft.AnsiConsole.Widgets.Json.pas',
   VSoft.AnsiConsole.Widgets.Exception in '..\..\source\Widgets\VSoft.AnsiConsole.Widgets.Exception.pas',
   VSoft.AnsiConsole.Recorder in '..\..\source\Console\VSoft.AnsiConsole.Recorder.pas',
-  VSoft.AnsiConsole in '..\..\source\VSoft.AnsiConsole.pas';
+  VSoft.AnsiConsole in '..\..\source\VSoft.AnsiConsole.pas',
+  System.Console.StreamWriter in '..\..\VSoft.System.Console\src\System.Console.StreamWriter.pas',
+  System.Console.SyncTextReader in '..\..\VSoft.System.Console\src\System.Console.SyncTextReader.pas',
+  System.Console.Types in '..\..\VSoft.System.Console\src\System.Console.Types.pas',
+  System.Console.Windows in '..\..\VSoft.System.Console\src\System.Console.Windows.pas',
+  System.Console.ConsoleStream in '..\..\VSoft.System.Console\src\System.Console.ConsoleStream.pas',
+  System.Console.InternalTypes in '..\..\VSoft.System.Console\src\System.Console.InternalTypes.pas',
+  System.Console in '..\..\VSoft.System.Console\src\System.Console.pas',
+  System.Console.Posix in '..\..\VSoft.System.Console\src\System.Console.Posix.pas';
 
 const
   // Total demo width. The terminal probably has more cells available;

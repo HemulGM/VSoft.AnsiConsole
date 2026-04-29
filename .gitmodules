@@ -1,0 +1,3 @@
+[submodule "VSoft.System.Console"]
+	path = VSoft.System.Console
+	url = https://github.com/VSoftTechnologies/VSoft.System.Console
